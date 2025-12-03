@@ -39,6 +39,8 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar */
@@ -92,15 +94,6 @@ body {
   animation: shimmer 1.5s infinite;
 }
 
-/* Grid pattern background */
-.grid-bg {
-  background-image:
-    linear-gradient(var(--color-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: -1px -1px;
-}
-
 /* Glow effect */
 .glow {
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
@@ -108,4 +101,11 @@ body {
 
 .dark .glow {
   box-shadow: 0 0 20px rgba(52, 211, 153, 0.3);
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }

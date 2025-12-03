@@ -51,7 +51,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]/80 backdrop-blur-md px-6">
+    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]/95 backdrop-blur-xl px-6 shadow-sm">
       {/* Namespace Selector */}
       <div className="relative">
         <button

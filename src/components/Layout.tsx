@@ -21,8 +21,8 @@ export function Layout({ children }: LayoutProps) {
         )}
       >
         <Header />
-        <main className="flex-1 overflow-auto p-6 grid-bg">
-          <div className="animate-fade-in">{children}</div>
+        <main className="flex-1 overflow-auto p-8 bg-gradient-to-br from-[var(--color-bg-primary)] via-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]">
+          <div className="animate-fade-in max-w-7xl mx-auto space-y-6">{children}</div>
         </main>
       </div>
     </div>

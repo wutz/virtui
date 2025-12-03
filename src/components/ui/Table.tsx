@@ -25,7 +25,7 @@ export function Table<T extends { name: string }>({
 }: TableProps<T>) {
   if (loading) {
     return (
-      <div className="rounded-xl border border-[var(--color-border)] overflow-hidden">
+      <div className="rounded-xl border border-[var(--color-border)] overflow-hidden bg-[var(--color-bg-primary)] shadow-sm">
         <div className="bg-[var(--color-bg-secondary)]">
           <div className="grid gap-4 p-4">
             {[...Array(5)].map((_, i) => (
@@ -38,10 +38,10 @@ export function Table<T extends { name: string }>({
   }
 
   return (
-    <div className="rounded-xl border border-[var(--color-border)] overflow-hidden">
+    <div className="rounded-xl border border-[var(--color-border)] overflow-hidden bg-[var(--color-bg-primary)] shadow-sm">
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-[var(--color-bg-secondary)]">
+          <thead className="bg-[var(--color-bg-secondary)] border-b border-[var(--color-border)]">
             <tr>
               {columns.map((col) => (
                 <th
@@ -61,7 +61,7 @@ export function Table<T extends { name: string }>({
               <tr>
                 <td
                   colSpan={columns.length}
-                  className="px-6 py-12 text-center text-sm text-[var(--color-text-muted)]"
+                  className="px-6 py-16 text-center text-sm text-[var(--color-text-muted)]"
                 >
                   {emptyMessage}
                 </td>
@@ -72,7 +72,7 @@ export function Table<T extends { name: string }>({
                   key={item.name || idx}
                   onClick={() => onRowClick?.(item)}
                   className={clsx(
-                    'bg-[var(--color-bg-primary)] transition-colors',
+                    'bg-[var(--color-bg-primary)] transition-all duration-200',
                     onRowClick && 'cursor-pointer hover:bg-[var(--color-bg-secondary)]'
                   )}
                 >

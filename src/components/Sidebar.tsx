@@ -89,7 +89,7 @@ export function Sidebar() {
   return (
     <aside
       className={clsx(
-        'fixed left-0 top-0 z-40 h-screen border-r border-[var(--color-border)] bg-[var(--color-bg-secondary)] transition-all duration-300',
+        'fixed left-0 top-0 z-40 h-screen border-r border-[var(--color-border)] bg-[var(--color-bg-secondary)]/95 backdrop-blur-xl shadow-lg transition-all duration-300',
         sidebarCollapsed ? 'w-16' : 'w-64'
       )}
     >
