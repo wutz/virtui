@@ -199,3 +199,4 @@ storageRoutes.delete('/filesystems/:name', async (c) => {
     return c.json({ error: 'Failed to delete PVC' }, 500)
   }
 })
+

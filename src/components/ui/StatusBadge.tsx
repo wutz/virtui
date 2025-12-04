@@ -52,3 +52,4 @@ export function StatusBadge({ status, variant }: StatusBadgeProps) {
     </span>
   )
 }
+

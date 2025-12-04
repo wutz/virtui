@@ -193,3 +193,4 @@ computeRoutes.post('/vms/:name/stop', async (c) => {
     return c.json({ error: 'Failed to stop VM' }, 500)
   }
 })
+
